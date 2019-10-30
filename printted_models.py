@@ -21,5 +21,5 @@ def show_completed_models(completed_models):
 
 unprinted_designs = ['iphone case','robot pendant','dodecahedron']
 completed_models = []
-print_models(unprinted_designs,completed_models)
+print_models(unprinted_designs,completed_models)	# 如果想要保留原列表，只需将此行代码改为：print_models(unprinted_designs[:],completed_models)
 show_completed_models(completed_models)
