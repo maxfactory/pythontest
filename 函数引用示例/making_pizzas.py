@@ -20,6 +20,7 @@
 # p.make_pizza(12,'mushrooms','green peppers','extra cheese')
 
 # 导入模块中的所有函数，使用（*）
+# 在使用并非自己编写的大型模块时，最好不要采用这种导入方法：
 from pizza import *
 make_pizza(16,'pepperoni')
 make_pizza(12,'mushrooms','green peppers','extra cheese')
