@@ -1,0 +1,214 @@
+第二章 Python语言基本语法元素
+二、程序题
+1.获得用户输入的一个整数N，计算并输出N的32次方。
+
+#输出n的32次方
+
+n = eval(input('Enter an integer:'))
+a = n
+i = 1
+while i < 32:
+    a *= n
+    i += 1
+print(a)
+2.获得用户输入的一段文字，将这段文字进行垂直输出。
+
+#垂直输出文字
+
+s = input('enter a sentence:')
+i = 0
+while i < len(s):
+    print(s[i])
+    i += 1
+3.获得用户输入的一个合法算式，例如1.2+3.4，输出运算结果。
+
+#计算输入的算式
+
+a =eval(input('Please enter an expression:'))
+print(a)
+4.获得用户输入的一个小数，提取并输出其整数部分。
+
+#输出小数的整数部分
+
+a = input('Enter a decimal:')
+i = 0
+while i < len(a):
+    if a[i] == '.':
+        print(a[0:i+1])
+        break
+    i += 1
+if i == len(a):
+    print(a)
+5.获得用户输入的一个整数N，计算并输出1到N相加的和。
+
+#计算1到n的和
+
+n = eval(input('请输入n：'))
+sum = 0
+for i in range(n+1):
+    sum += i 
+print(sum)
+第三章 数字类型
+一、选择题
+答案：C A A A B A C D A C
+
+二、程序题
+1.获得用户输入的一个整数，输出该整数百位及以上的数字。
+
+#输出百位以上数字
+
+a=eval(input('Enter a integer:')) 
+b=a//100
+print(b)
+2.获得用户输入的一个字符串，将字符串按照空格分割，然后逐行打印出来。
+
+#按空格分割句子，然后逐行打印
+
+a = input('输入句子：')
+b= a.split(' ')
+for i in b:
+    print(i)
+3.程序读入一个表示星期几的数字（1-7），输出对应的星期字符串名称。例如，输入3，返回“星期三”。
+
+#根据数字输出星期
+
+day=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+n = eval(input('输入数字：'))
+a = n % 7
+print(day[a])
+4.设n是一任意自然数，如果n的各位数字反向排列所得自然数与n相等，则n被称为回文数。从键盘输入一个5位数字，请编写程序判断这个数字是不是回文数。
+
+#判断是否位回文
+
+a =input('输入一个数字：')
+l = len(a)
+b=''
+while l > 0:
+    b += a[l-1]
+    l -= 1
+if a == b:
+    print('这是一个回文数字。')
+else:
+    print('这不是一个回文数字。')
+5.输入一个十进制整数，分别输出其二进制、八进制、十六进制字符串。
+
+
+#根据输入数字，输出其二进制、八进制和十六进制形式
+
+a =eval(input('输入一个整数：')) 
+if type(a) == type(100):
+    print('{0}经过转化：\n二进制形式为:{0:b}\n八进制形式为:{0:o}\n十六进制形式为:{0:X}.'.format(a))
+else:
+    print('输入数字不是整数，请重新输入！')
+
+
+第四章 程序的控制结构
+二、程序题
+1.输入一个年份，输出是否是闰年。#闰年条件：能被4整除但不能被100整除，或者能被400整除的年份，都是闰年。
+
+2.最大公约数计算。获得两个整数，求出这两个整数的最大公约数和最小公倍数。最大公约数的计算一般使用辗转相除法，最小公倍数则使用两个数的乘积除以最大公约数。
+
+3.统计不同字符个数。用户从键盘键入一行字符，编写一个程序，统计并输出其中英文字符、数字、空格和其他字符的个数。
+
+4.改编题目1中的程序，当用户输入出错时给出“输入内容必须是整数！”的提示，并让用户重新输入。
+
+5.羊车门问题。有三扇关闭的门，一扇门后面停着汽车，其余门后是山羊，只有主持人知道每扇门后面是什么。参赛者可以选择一扇门。在开启它之前，主持人会开启另外一扇门，露出门后的山羊。此时，允许参赛者更换自己的选择。请问，参赛者更换选择后能否增加猜中汽车的机会？——这是一个经典问题。请使用random库对这个随机事件进行预测，分别输出参赛者改变选择和坚持选择获胜的概率。
+
+第六章 组合数据类型
+Tips:
+2.字典类型的key只能是不可变数据类型；
+3.Python中以下情况判断为False：
+（1）None–>None值
+（2）False–>False值
+（3）0 ---> 数值零不管它是int,float还是complex类型
+（4）‘’,(),[] ---> 任何一个空的序列
+（5）{} ---> 空的集合。
+9.列表类型的pop(i)方法，如果不指定参数 i，则默认取出并删除列表中最后一个元素
+
+二、程序题
+1.英文字符频率统计。编写一个程序，对给定字符串中出现的a~z字母频率进行分析，忽略大小写，采用降序方式输出。
+
+#输出句子中的英文字母的词频
+
+sentence = input('输入句子：')
+sentence = sentence.lower()
+chrCounts = dict()
+for chr in sentence:
+    if 97 <= ord(chr) <= 122:
+        chrCounts[chr] = chrCounts.get(chr, 0) + 1
+    else:
+        continue
+lChrCounts = list(chrCounts.items())
+lChrCounts.sort(key=lambda x: x[1], reverse=True)
+for i in range(len(lChrCounts)):
+    cha, count = lChrCounts[i]
+    print('{:<10}{:>10}'.format(cha, count))
+2.中文字符频率统计。编写一个程序，对给定字符串中出现的全部字符（含中文字符）频率进行分析，采用降序方式输出。
+
+#输出句子中的所有字符的词频
+
+sentence = input('输入句子：')
+sentence = sentence.lower()
+chrCounts = dict()
+for chr in sentence:
+    chrCounts[chr] = chrCounts.get(chr, 0) + 1
+lChrCounts = list(chrCounts.items())
+lChrCounts.sort(key=lambda x: x[1], reverse=True)
+for i in range(len(lChrCounts)):
+    cha, count = lChrCounts[i]
+    print('{:<10}{:>10}'.format(cha, count))
+3.随机密码生成。编写程序，在26个字母大小写和9个数字组成的列表中随机生成10个8位密码。
+
+#随机生成10个八位密码
+
+import string
+from random import *
+
+password = ''
+resource = string.ascii_letters + string.digits
+
+for i in range(10):
+    password = ''
+    for j in range(8):
+        newChaIndex = randint(0,len(resource)-1)
+        password += resource[newChaIndex]
+    else:
+        print(password)
+4.重复元素判定。编写一个函数，接受列表作为参数，如果一个元素在列表中出现了不止一次，则返回True，但不要改变原来列表的值。同时编写调用这个函数和输出测试结果的程序。
+
+#判断数组中是否有重复元素
+
+def isDuplicate(n):
+    for i in range(len(n)-1):
+        if n[i] == n[i + 1]:
+            return True
+        else:
+            continue
+    else:
+        return False
+
+
+aList = input('输入一串列表值（用“，”分隔数字）：')
+
+newList = aList.split('，')
+newList = aList.split(',')
+for i in range(len(newList)):
+    newList[i] = eval(newList[i])
+newList.sort()
+
+print(isDuplicate(newList))
+5.重复元素判定续。利用集合的无重复性改编上一个程序，获得一个更快更简洁的版本。
+
+
+#利用集合来判定是否有重复元素
+
+def isDuplicate(n):
+    s = set(n)
+    if len(s) == len(n):
+        return False
+    else:
+        return True
+
+
+newList = [1,2,3,1,534,'3523','popuo']
+print(isDuplicate(newList))
