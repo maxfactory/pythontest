@@ -27,7 +27,7 @@ def print_models(unprited_designs,completed_models):
 		print("Print model:" + current_design)
 		completed_models.append(current_design)
 
-def show_completed_models():
+def show_completed_models(completed_models):
 	"""显示打印好的所有模型"""
 	print("\nThe following models have been printed:")
 	for completed_model in completed_models:
@@ -36,4 +36,4 @@ def show_completed_models():
 unprited_designs = ['iphone case','robot pendant','dodecahedron']
 completed_models = []
 print_models(unprited_designs,completed_models)
-show_completed_models()
+show_completed_models(completed_models)
