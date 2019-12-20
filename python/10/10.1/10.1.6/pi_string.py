@@ -7,6 +7,7 @@ for line in lines:
 	# pi_string += line.rstrip()
 	pi_string += line.strip()
 
+pi_string = pi_string.replace('\\','')
 # 判断生日是否包含于pi中
 birthday = input("Enter your birthday,in the form mmddyy: ")
 if birthday in pi_string:
