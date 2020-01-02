@@ -15,11 +15,12 @@ def run_game():
 
 	while True:
 		gf.check_events()
+		gf.update_screen(ai_settings,screen,ship)
 
 		# 让最近绘制的屏幕可见
 		# 每次循环时都重绘屏幕
-		screen.fill(ai_settings.bg_color)
-		ship.blitme()
+		# screen.fill(ai_settings.bg_color)
+		# ship.blitme()
 
 		# 让最近绘制的屏幕可见
 		pygame.display.flip()
