@@ -1,14 +1,14 @@
 """绘制五角红星
 用Python程序绘制一个五角红星图形。"""
 from turtle import *
-# color('red','red')
-# hideturtle()		# 隐藏画笔
-# begin_fill()
-# for i in range(5):
-# 	fd(200)
-# 	rt(144)
-# end_fill()
-# done()
+##color('red','red')
+##hideturtle()		# 隐藏画笔
+##begin_fill()
+##for i in range(5):
+##    fd(200)
+##    rt(144)
+##end_fill()
+##done()
 
 i = 5
 color('red','red')
