@@ -4,4 +4,4 @@ def main(n):
 		print((" * " * i).center(n*3))
 	for i in range(n,0,-1):
 		print((" * " * i).center(n*3))
-main(0)
+main()
