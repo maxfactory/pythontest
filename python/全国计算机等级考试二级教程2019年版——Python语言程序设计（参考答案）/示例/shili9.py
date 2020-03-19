@@ -18,6 +18,9 @@ def factors(num,fac=[]):
 		fac.append(num)
 
 facs = []
+
+
+
 n = randint(2,10**8)
 factors(n,facs)
 result = '*'.join(map(str,facs))
