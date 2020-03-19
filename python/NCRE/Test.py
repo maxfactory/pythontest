@@ -31,7 +31,12 @@
 # 		names.append(na)
 # print(names)
 
-import random
-for i in range(10):
-	a = random.random()
-	print(a)
+# import random
+# for i in range(10):
+# 	a = random.random()
+# 	print(a)
+
+def printInfo(name):
+	# return 'hello',name
+	return 1
+print(printInfo('qiang'))
