@@ -56,22 +56,22 @@
 # except AssertionError as reason:
 # 	print('%s:%s'%(reason.__class__.__name__,reason))
 
-from random import randint
-def aaa(nu,li=[]):
-	for i in range(2,int(nu**0.5)+1):
-		if nu %i == 0:
-			li.append(i)
-			aaa(nu//i,li)
-			break
-	else:
-		li.append(nu)
+# from random import randint
+# def aaa(nu,li=[]):
+# 	for i in range(2,int(nu**0.5)+1):
+# 		if nu %i == 0:
+# 			li.append(i)
+# 			aaa(nu//i,li)
+# 			break
+# 	else:
+# 		li.append(nu)
 
-lis = []
-n = randint(2,50)
-aaa(n,lis)
-result = '*'.join(map(str,lis))
-if n == eval(result):
-	print(n,'=',result)
+# lis = []
+# n = randint(2,50)
+# aaa(n,lis)
+# result = '*'.join(map(str,lis))
+# if n == eval(result):
+# 	print(n,'=',result)
 # print(n,'=',result)
 # def maxmin(a,b):
 # 	if a>b:
@@ -110,3 +110,11 @@ if n == eval(result):
 
 # a = list(myMap(range(2),'+',5))
 # print(a)
+
+
+# for i in range(2):
+# 	print(type(i))
+# a = 8
+# print(type(a))
+a = map(str,range(2))
+print(type(a))
