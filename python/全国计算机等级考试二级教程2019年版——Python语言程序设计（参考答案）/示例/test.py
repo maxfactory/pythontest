@@ -49,9 +49,14 @@
 # assert a>10,'值太小！'
 # print(a)
 
-a = 3
-b = 5
-try:
-	assert a == b,'a must be equal to b'
-except AssertionError as reason:
-	print('%s:%s'%(reason.__class__.__name__,reason))
+# a = 3
+# b = 5
+# try:
+# 	assert a == b,'a must be equal to b'
+# except AssertionError as reason:
+# 	print('%s:%s'%(reason.__class__.__name__,reason))
+
+for i in range(9):
+	if i > 5:
+		print(i)
+		# break
