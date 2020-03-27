@@ -116,5 +116,58 @@
 # 	print(type(i))
 # a = 8
 # print(type(a))
-a = map(str,range(2))
-print(type(a))
+# a = map(str,range(2))
+# print(type(a))
+
+
+# def myMap(inter,op,value):
+# 	def nested(item):
+# 		return eval(repr(item)+op+repr(value))
+# 	return map(nested,inter)
+
+# a = list(myMap(range(5),'+',5))
+# print(a)
+
+# # def myMap(inter,op,value):
+# # 	return eval(repr(inter)+op+repr(value))
+# # a = list(myMap(range(5),'+',5))
+# # print(a)
+
+# def nested(item):
+# 		return eval(repr(item)+'+'+repr(5))
+# a = list(map(nested,range(5)))
+# print(a)
+
+# def myMap(a,b,c):
+# 	if b not in '+-*/':
+# 		print("Error")
+# 	def nested(d):
+# 		return eval(str(d)+b+str(c))
+# 	return map(nested,a)
+
+# a = list(myMap(range(5),'*',5))
+# print(a)
+
+
+print("*"*20)
+# def test(n):
+# 	li = []
+# 	for i in range(n):
+# 		a = i *5
+# 		li.append(a)
+# 	else:
+# 		print(li)	
+
+# # print(li)
+# test(5)
+
+print("*"*20)
+
+def atest(n):
+	return n*3
+a = list(map(atest,range(5)))
+b = atest(5)
+# a=atest(range(5))
+print(a)
+print(b)
+
