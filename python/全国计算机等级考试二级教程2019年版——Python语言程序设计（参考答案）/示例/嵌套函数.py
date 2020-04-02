@@ -16,7 +16,7 @@ def factors(num, fac=[]):
 facs = []
 
 # n = randint(2,5*8)
-n =16
+n =15
 factors(n,facs)
 result = '*'.join(map(str,facs))
 if n == eval(result):
