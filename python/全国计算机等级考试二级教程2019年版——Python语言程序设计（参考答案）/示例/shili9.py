@@ -23,5 +23,6 @@ facs = []
 n =16
 factors(n,facs)
 result = '*'.join(map(str,facs))
-if n == eval(result):
-	print(n, '= '+result)
+# if n == eval(result):
+# 	print(n, '= '+result)
+print(n, '= '+result)
