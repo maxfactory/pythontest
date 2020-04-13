@@ -107,13 +107,25 @@ print(sum(2))"""
 # print(fact(abs(int(num))))
 
 
-import turtle as t
-def DrawCctCircle(n):
-	t.penup()
-	t.goto(0,-n)
-	t.pendown()
-	t.circle(n)
-for i in range(20,80,20):
-	DrawCctCircle(i)
-t.done()
+# import turtle as t
+# def DrawCctCircle(n):
+# 	t.penup()
+# 	t.goto(0,-n)
+# 	t.pendown()
+# 	t.circle(n)
+# for i in range(20,80,20):
+# 	DrawCctCircle(i)
+# t.done()
 
+# a = "Python等级考试"
+# b = "="
+# c = ">"
+# print("{0:{1}{3}{2}}".format(a, b, 25, c))
+"""{0(format参数索引):(相当于python2中的%)=(空格处填充)>(’:'前的东西右对齐)25(最小宽度)}"""
+
+
+d = {}
+for i in range(26):
+    d[chr(i+ord("a"))] = chr((i+13) % 26 + ord("a"))
+for c in "Python":
+    print(d.get(c, c), end="")
