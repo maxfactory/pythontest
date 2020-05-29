@@ -22,7 +22,15 @@
 # turtle.done()
 
 
+# sum = 0
+# for i in range(1,366):
+# 	sum += i
+# 	print(sum)
+
 sum = 0
-for i in range(1,366):
-	sum += i
-	print(sum)
+i = 1
+while i<101:
+	sum +=i
+	i+=1
+
+print(sum)
