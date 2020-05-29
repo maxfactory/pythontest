@@ -18,7 +18,7 @@ for i in range(n):
             score = input('请输入第{0}个评委的分数：'.format(i + 1))
             # 把字符串转换为实数
             score = float(score)
-            assert 0 <= score <= 100 	# assert 检查条件，不符合就终止程序
+            assert 0 <= score <= 100
             scores.append(score)
             # 如果数据合法，跳出while循环，继续输入下一个评委的分数
             break
