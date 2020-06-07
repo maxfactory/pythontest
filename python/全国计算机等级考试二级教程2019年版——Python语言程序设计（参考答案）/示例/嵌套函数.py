@@ -1,7 +1,3 @@
-"""
-问题：使用递归法对整数进行因数分解
-
-"""
 from random import randint
 def factors(num, fac=[]):
 	# 每次都从2开始查找因数
@@ -20,9 +16,8 @@ def factors(num, fac=[]):
 facs = []
 
 # n = randint(2,5*8)
-n =16
+n =15
 factors(n,facs)
 result = '*'.join(map(str,facs))
-# if n == eval(result):
-# 	print(n, '= '+result)
-print(n, '= '+result)
+if n == eval(result):
+	print(n, '= '+result)
