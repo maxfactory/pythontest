@@ -34,7 +34,11 @@ def get_top_10_perfomers():
 #     top_10_performers = top_list[:20]
 #     return top_10_performers
 
-print("**********涨幅榜前10************")
+print("**********涨幅榜前50************")
 print(get_top_10_perfomers())
 # print("**********跌幅榜前10************")
 # print(get_top_10_droppers())
+
+# filename = 'D:\\stock\\zhenlihou'+year+'_'+month+'_'+day+'.csv'
+# with open(filename,'w',encoding='gbk') as f_obj:
+#     f_obj.write(str(get_top_10_perfomers()))
